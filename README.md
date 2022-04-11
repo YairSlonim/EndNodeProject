@@ -1,3 +1,3 @@
 # EndNodeProject
-Movies Data Manager
+Movies Data Manager, 
 A web site for movies subscription management
