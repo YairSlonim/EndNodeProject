@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Add New Movie</h1>
+
+        <form  action="/movies/addNewMovie/<%= data._id %>" method="post">
+            <div class="container" style='padding:40px;width:200px'>
+                <label for="Name"><b> Name</b></label>
+              <input style='width:100%' type="text" placeholder="Enter  Name" name="Name"  value="<%=data.Name%>"> <br/>
+
+              <label for="Genres"><b>Genres</b></label>
+              <input style='width:100%' type="text" placeholder="Enter Last Name" name="Genres"  value="<%=data.Genres%>"><br/>
+
+              <label for="Image"><b>Image Url</b></label>
+              <input style=width:100% type="text" placeholder="Enter Image Url" name="Image"  value="<%=data.Image%>"><br/>
+            
+              <label for="date"><b>Premired</b></label>
+              <input style='width:100%' type="date" placeholder="Enter Premired" name="date"  value="<%=data.date%>"><br/>
+              
+              
+              <button type="submit">Save</button>
+            </div>
+          </form> 
+    </body>
+</html>

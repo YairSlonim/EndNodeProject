@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <h4>Log In Page</h4>
+        <form  action="/getlogindata"" method="post">
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required><br/>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required><br/>
+          
+              <button type="submit">Login</button>
+            </div>
+          
+            <div class="container" style="background-color:#f1f1f1">
+              <span class="psw">New User?:   <a href="/createAccount">  Create Account</a></span>
+            </div>
+          </form>
+    </body>
+</html>

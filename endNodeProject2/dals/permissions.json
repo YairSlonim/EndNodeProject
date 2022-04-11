@@ -1,0 +1,20 @@
+[{
+    "_id":{"$oid":"61e92cb4f53fc15b48e2d98e"},
+    "permission":["View Subscriptions",
+        "Create Subscriptions",
+        "Delete Subscriptions",
+        "Update Subscriptions",
+        "View Movies",
+        "Create Movies",
+        "Delete Movies",
+        "Update Movies"]
+}, {
+    "_id":{"$oid": "61ed238aa62acea36fe19b75"},
+    "permission": ["View Subscriptions","Create Subscriptions", "Delete Subscriptions"]
+}, {
+    "_id":{"$oid": "61ed2e207a072288d8b9a072"},
+    "permission": ["Create Subscriptions", "Delete Subscriptions", "Update Subscriptions", "View Movies", "Create Movies"]
+}, {
+    "_id":{"$oid": "62136040547ddb47921ec08b"},
+    "permission": ["View Subscriptions", "Create Subscriptions", "Delete Subscriptions", "Update Subscriptions"]
+}]

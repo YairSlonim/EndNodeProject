@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Add New Sub</h1>
+
+        <form  action="/subscriptions/AddOrUpdateMember/<%=data._id %>" method="post">
+            <div class="container" style='padding:40px;width:200px'>
+                <label for="Name"><b> Name</b></label>
+              <input style='width:100%' type="text" placeholder="Enter  Name" name="Name"  value="<%=data.Name%>"> <br/>
+
+              <label for="Email"><b>Email</b></label>
+              <input style='width:100%' type="text" placeholder="Enter Email" name="Email"  value="<%=data.Email%>"><br/>
+
+              <label for="City"><b>City</b></label>
+              <input style=width:100% type="text" placeholder="Enter City" name="City"  value="<%=data.City%>"><br/>
+            
+              
+              
+              <button type="submit">Save</button>
+            </div>
+          </form> 
+    </body>
+</html>

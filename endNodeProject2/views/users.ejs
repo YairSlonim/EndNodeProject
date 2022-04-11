@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Users</h1>
+    <html>
+      <body>
+          <ul>
+              <% data.forEach(function(item){ %>
+                  <li>Name : <%= item.FirstName %>  <%= item.LastName%></li></br>
+                  <li>Username: <%= item.username %></li></br>
+                  <li>Session Time Out :<%= item.SessionTimeOut %></li></br>
+                  <li>permission :<%= item.permission %></li></br>
+                  <a href="users/user/<%=item.username%>"><button>Edit</button></a>
+                  <a href="users/delete/<%=item.id%>"><button>Delete</button></a><br/>
+                  <li>---------------------</li>
+              <% }) %> 
+          </ul>
+          <a href="users/add">Add User</a><br/>
+          <form action="/backToMain">
+              <input type="submit" value="Go to mainPage" />
+          </form>
+      </body>
+  </html>
+    
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <style> 
+   
+        #movie{
+        
+        width: 400px;
+        border: 5px solid black;
+        padding: 20px;
+        margin: 20px;
+        }
+        #subs{
+          border: 3px solid black;
+          padding: 10px;
+      
+        }
+        </style>
+   
+    
+  <body>
+    <h1>Movies</h1>
+    <html>
+      <body>
+        <form action="/backToMain">
+          <input type="submit" value="Go to mainPage" />
+      </form>
+      <form action="/movies/find">
+        <input type="text" name="name">
+        <button type="submit">find</button>
+    </form>
+        <dl>
+              <% data.forEach(function(item){ %>
+                <div id=movie>
+                <dt style="margin-bottom:5px;"><li> <%= item.Name %>," <%= item.date %>"</li></dt>
+                  
+                  <dt style="margin-bottom:5px;"><li>genres: <%= item.Genres %></li></dt></br>
+                  <dt>
+                  <li ><img style="display:inline-block;width:60px;height:120px;margin-bottom:-25px;" src=<%= item.Image %>>
+
+                    <% if(item.subscribe.length !== 0) { %>
+                    <div id="subs" style="display:inline-block;">
+                      
+                          Subscriptions watched
+                          <ul>
+                        <%item.subscribe?.forEach(function(x){ %>
+                          <li><a href="/subscriptions/member/<%= x.memberId %>"><%=x.Name%></a>,<%=x.date %> </li>
+                       <% })%>
+                      </ul>
+                    </div>
+                    <% var obj = JSON.stringify(item) %>
+                    <dd style="margin-top: 15px;"><a href="/movies/movie/<%=item._id%>"><button>Edit</button></a>
+                      <a href="/movies/delete/<%=item._id%>?obj=<%= obj %>"><button>Delete</button></a></dd>
+                    </br>
+                    <% } %>
+                  </dt>
+                  
+                 <% if(item.subscribe.length === 0){ %>
+                  <dd style="margin-top: 35px;"><a href="/movies/movie/<%=item._id%>"><button>Edit</button></a>
+                  <a href="/movies/delete/<%=item._id%>"><button>Delete</button></a></dd>
+                </br>
+                 <% } %>
+               
+                </div>
+              <% }) %> 
+            
+            <dl>
+              
+              
+  </body>
+</html>

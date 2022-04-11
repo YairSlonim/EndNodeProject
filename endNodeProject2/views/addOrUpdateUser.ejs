@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <h1>Add New User</h1>
+
+        <form  action="/users/addNewUser/<%= data.id %>" method="post">
+            <div class="container">
+                <label for="firstname"><b>First Name</b></label>
+              <input type="text" placeholder="Enter First Name" name="firstname"  value="<%=data.FirstName%>"> <br/>
+
+              <label for="lastname"><b>Last Name</b></label>
+              <input type="text" placeholder="Enter Last Name" name="lastname"  value="<%=data.LastName%>"><br/>
+
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username"  value="<%=data.username%>"><br/>
+            
+              <label for="SessionTimeOut"><b>SessionTimeOut</b></label>
+              <input type="text" placeholder="Enter SessionTimeOut" name="SessionTimeOut"  value="<%=data.SessionTimeOut%>"><br/>
+              <% if (index > 0){ %>
+              Permissions: </br> 
+                <% arr.map(x =>{ let check= data.permissions.filter( y => y===x)  %>
+                    <% if(check.length !== 0){%>
+                    <input type="checkbox" name="permission" value="<%= x %>" checked >
+                    <label for="<%= x %>"> <%= x %></label></br>
+                    <% }else{ %>
+                        <input type="checkbox" name="permission"  value="<%= x %>"  >
+                        <label for="<%= x %>"> <%= x %></label></br>
+             <% }})} else {%>
+            </br> 
+            <% arr.map(x =>{ %>
+              <input type="checkbox" name="permission" value="<%= x %>"  >
+              <label for="<%= x %>"> <%= x %></label></br>
+            <%})}%>
+
+
+              
+              
+              <button type="submit">Save</button>
+            </div>
+          </form> 
+    </body>
+</html>>

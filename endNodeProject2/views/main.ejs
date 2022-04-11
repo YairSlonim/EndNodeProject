@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>Main Page</h1>
+    <a href="/movies/moviesManagment"">
+        <button>Movies</button>
+    </a>
+    <a href="/subscriptions">
+        <button>Subscriptions</button>
+    </a>
+    <% if(admin){ %>
+    <a href=/users/usersManagment>
+        <button>Users Managment</button>
+    </a>
+    <% }%>
+    <a href="/">
+        <button>Log Out</button>
+    </a>
+    </body>
+</html>

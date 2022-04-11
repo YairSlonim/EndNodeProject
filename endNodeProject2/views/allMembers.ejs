@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+      
+        width: 400px;
+        border: 5px solid black;
+        padding: 20px;
+        margin: 20px;
+      }
+      </style>
+  </head>
+    <h1>Members</h1>
+      <body>
+          <ul>
+              <% data.forEach(function(item){ %>
+                <div>
+                  <li>Name : <%= item.Name %></li></br>
+                  <li>Email: <%= item.Email %></li></br>
+                  <li>City :<%= item.City %></li></br>
+                  <a href="/subscriptions/member/<%=item._id%>"><button>Edit</button></a>
+                  <a href="/subscriptions/delete/<%=item._id%>"><button>Delete</button></a><br/>
+                  <form action="/subscriptions/addNewSub/<%= item._id %>"  method="post">
+                    <h2>Subscribe to a new movie:</h2>
+                    <select name="movieName" required>
+                      <%movies.map(v =>{%>
+                          <option value="<%=v.Name%>"><%=v.Name%></option>
+                      <%})%>
+                  </select>
+                      Premiered
+                      <input type="date" name="date">
+                      <button type="submit">Save</button>
+                  </form>
+                  <h2>Whatched movies:</h2>
+                  <ul>
+
+                    <%item.movies.map(x =>{ %>
+                      <%var fullDate = x.date%>
+                    <%var k = new Date(fullDate)%>
+                      <li><u><a href="/movies/search/<%=x.Name%>"><%=x.Name%></a></u>,<%=k.getDate()%>/<%=k.getMonth()+1%>/<%=k.getFullYear()%></li><br/>
+                      <%})%>
+                  </ul>
+                  <li>---------------------</li>
+                </div>
+              <% }) %> 
+          </ul>
+          <form action="/backToMain">
+              <input type="submit" value="Go to mainPage" />
+          </form>
+
+    
+  </body>
+</html>

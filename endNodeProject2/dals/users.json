@@ -1,0 +1,25 @@
+[{
+    "_id": {"$oid":"61e92cb4f53fc15b48e2d98e"},
+    "FirstName": "Admin",
+    "LastName": "Admin",
+    "CreateDate": "sadasd",
+    "SessionTimeOut": "50"
+}, {
+    "_id":{"$oid": "61ed238aa62acea36fe19b75"},
+    "FirstName": "cristiano",
+    "LastName": "ronaldo",
+    "CreateDate": "2022-01-23T09:44:42.330Z",
+    "SessionTimeOut": "50"
+}, {
+    "_id":{"$oid": "61ed2e207a072288d8b9a072"},
+    "FirstName": "jennifer",
+    "LastName": "aniston",
+    "CreateDate": "2022-01-23T10:29:52.909Z",
+    "SessionTimeOut": "50"
+}, {
+    "_id":{"$oid": "62136040547ddb47921ec08b"},
+    "FirstName": "asdsad",
+    "LastName": "DSADSAD",
+    "CreateDate": "2022-02-21T09:49:52.600Z",
+    "SessionTimeOut": "60"
+}]
